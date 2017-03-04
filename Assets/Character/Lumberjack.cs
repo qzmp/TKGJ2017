@@ -18,7 +18,7 @@ public class Lumberjack : MonoBehaviour {
 
     public int hp = 10;
     private float lastHurtTime = 0;
-    private float hurtInterval;
+    public float hurtInterval;
 
 	// Use this for initialization
 	void Start () {
@@ -28,26 +28,29 @@ public class Lumberjack : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(nearTree())
+        if(hp > 0)
         {
-            currentTarget = null;
-            if(!cutting)
+            if (nearTree())
             {
-                cutting = true;
-                anim.SetBool("nearTree", true);
+                currentTarget = null;
+                if (!cutting)
+                {
+                    cutting = true;
+                    anim.SetBool("nearTree", true);
+                }
             }
-        }
-        else
-        {
-            if(cutting)
+            else
             {
-                cutting = false;
-                anim.SetBool("nearTree", false);
-                restEnd = Time.time + restTime;
-            }
-            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Moving"))
-            {
-                goToTree();
+                if (cutting)
+                {
+                    cutting = false;
+                    anim.SetBool("nearTree", false);
+                    restEnd = Time.time + restTime;
+                }
+                if (anim.GetCurrentAnimatorStateInfo(0).IsName("Moving"))
+                {
+                    goToTree();
+                }
             }
         }
 	}
@@ -73,7 +76,7 @@ public class Lumberjack : MonoBehaviour {
         var lookPos = currentTarget.position - transform.position;
         lookPos.y = 0;
         var rotation = Quaternion.LookRotation(lookPos);
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotationSpeed);
 
         //transform.rotation = Quaternion.LookRotation(newDir);
         //transform.rotation = transform.rotation * Quaternion.AngleAxis(0, Vector3.left);
@@ -114,21 +117,31 @@ public class Lumberjack : MonoBehaviour {
 
     void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Danger" && !recentlyHurt())
+        if (other.tag == "Damage" && !recentlyHurt())
         {
-            hp--;
+            if(hp > 0)
+                damage();
         }
     }
 
     void damage()
     {
         hp--;
+        
         lastHurtTime = Time.time;
+        if(hp <= 0)
+        {
+            anim.SetTrigger("dying");
+        }
+        else
+        {
+            anim.SetTrigger("hurt");
+        }
     }
 
     bool recentlyHurt()
     {
-        return Time.time - lastHurtTime > hurtInterval;
+        return Time.time - lastHurtTime < hurtInterval;
     }
 
 }

@@ -17,7 +17,7 @@ public class WaspNest : MonoBehaviour {
         if (Input.GetMouseButtonUp(0))
         {
             GetComponent<Rigidbody>().isKinematic = false;
-            GetComponent<Rigidbody>().AddForce(transform.forward * 9999);
+            GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
         }
     }
 
