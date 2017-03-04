@@ -25,7 +25,8 @@ public class TreeBehaviour : MonoBehaviour
     void cutDown()
     {
         GetComponent<Rigidbody>().isKinematic = false;
-        gameObject.layer = 5;
+        gameObject.tag = "FellTree";
+        gameObject.layer = 8;
     }
 
     void OnTriggerEnter(Collider other)
