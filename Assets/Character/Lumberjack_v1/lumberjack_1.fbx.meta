@@ -1,0 +1,747 @@
+fileFormatVersion: 2
+guid: 235b27a2f0cb2294fa97e90baf86c6ad
+timeCreated: 1488639651
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: armature
+    100002: bn_foot_L
+    100004: bn_foot_R
+    100006: bn_hand1_L
+    100008: bn_hand1_R
+    100010: bn_hand2_L
+    100012: bn_hand2_R
+    100014: bn_hand3_L
+    100016: bn_hand3_R
+    100018: bn_hand_IK_L
+    100020: bn_hand_IK_R
+    100022: bn_hand_pole1_L
+    100024: bn_hand_pole1_R
+    100026: bn_head
+    100028: bn_headphones
+    100030: bn_leg1_L
+    100032: bn_leg1_R
+    100034: bn_leg2_L
+    100036: bn_leg2_R
+    100038: bn_leg_IK_L
+    100040: bn_leg_IK_R
+    100042: bn_leg_pole_L
+    100044: bn_leg_pole_R
+    100046: bn_root
+    100048: bn_spine1
+    100050: bn_spine2
+    100052: lumberjack
+    100054: //RootNode
+    100056: Plane.008
+    400000: armature
+    400002: bn_foot_L
+    400004: bn_foot_R
+    400006: bn_hand1_L
+    400008: bn_hand1_R
+    400010: bn_hand2_L
+    400012: bn_hand2_R
+    400014: bn_hand3_L
+    400016: bn_hand3_R
+    400018: bn_hand_IK_L
+    400020: bn_hand_IK_R
+    400022: bn_hand_pole1_L
+    400024: bn_hand_pole1_R
+    400026: bn_head
+    400028: bn_headphones
+    400030: bn_leg1_L
+    400032: bn_leg1_R
+    400034: bn_leg2_L
+    400036: bn_leg2_R
+    400038: bn_leg_IK_L
+    400040: bn_leg_IK_R
+    400042: bn_leg_pole_L
+    400044: bn_leg_pole_R
+    400046: bn_root
+    400048: bn_spine1
+    400050: bn_spine2
+    400052: lumberjack
+    400054: //RootNode
+    400056: Plane.008
+    4300000: Plane.008
+    4300002: lumberjack
+    7400000: armature|anim_lumb_cutting
+    7400002: armature|anim_lumb_dmg
+    7400004: armature|anim_lumb_dying
+    7400006: armature|anim_lumb_run
+    7400008: armature|lumberjackAction
+    7400010: Plane.008|lumberjackAction
+    7400012: lumberjack|lumberjackAction
+    9500000: //RootNode
+    13700000: lumberjack
+    13700002: Plane.008
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: armature|anim_lumb_cutting
+      takeName: armature|anim_lumb_cutting
+      firstFrame: 0
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: armature
+        weight: 1
+      - path: armature/bn_root
+        weight: 1
+      - path: armature/bn_root/bn_hand_IK_L
+        weight: 1
+      - path: armature/bn_root/bn_hand_IK_R
+        weight: 1
+      - path: armature/bn_root/bn_hand_pole1_L
+        weight: 1
+      - path: armature/bn_root/bn_hand_pole1_R
+        weight: 1
+      - path: armature/bn_root/bn_leg_IK_L
+        weight: 1
+      - path: armature/bn_root/bn_leg_IK_R
+        weight: 1
+      - path: armature/bn_root/bn_leg_pole_L
+        weight: 1
+      - path: armature/bn_root/bn_leg_pole_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_L/bn_hand2_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_L/bn_hand2_L/bn_hand3_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_R/bn_hand2_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_R/bn_hand2_R/bn_hand3_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_head
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_head/bn_headphones
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_L/bn_leg2_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_L/bn_leg2_L/bn_foot_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_R/bn_leg2_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_R/bn_leg2_R/bn_foot_R
+        weight: 1
+      - path: lumberjack
+        weight: 1
+      - path: Plane.008
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: armature|anim_lumb_dmg
+      takeName: armature|anim_lumb_dmg
+      firstFrame: 0
+      lastFrame: 13
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: armature
+        weight: 1
+      - path: armature/bn_root
+        weight: 1
+      - path: armature/bn_root/bn_hand_IK_L
+        weight: 1
+      - path: armature/bn_root/bn_hand_IK_R
+        weight: 1
+      - path: armature/bn_root/bn_hand_pole1_L
+        weight: 1
+      - path: armature/bn_root/bn_hand_pole1_R
+        weight: 1
+      - path: armature/bn_root/bn_leg_IK_L
+        weight: 1
+      - path: armature/bn_root/bn_leg_IK_R
+        weight: 1
+      - path: armature/bn_root/bn_leg_pole_L
+        weight: 1
+      - path: armature/bn_root/bn_leg_pole_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_L/bn_hand2_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_L/bn_hand2_L/bn_hand3_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_R/bn_hand2_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_R/bn_hand2_R/bn_hand3_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_head
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_head/bn_headphones
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_L/bn_leg2_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_L/bn_leg2_L/bn_foot_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_R/bn_leg2_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_R/bn_leg2_R/bn_foot_R
+        weight: 1
+      - path: lumberjack
+        weight: 1
+      - path: Plane.008
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: armature|anim_lumb_dying
+      takeName: armature|anim_lumb_dying
+      firstFrame: 0
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: armature
+        weight: 1
+      - path: armature/bn_root
+        weight: 1
+      - path: armature/bn_root/bn_hand_IK_L
+        weight: 1
+      - path: armature/bn_root/bn_hand_IK_R
+        weight: 1
+      - path: armature/bn_root/bn_hand_pole1_L
+        weight: 1
+      - path: armature/bn_root/bn_hand_pole1_R
+        weight: 1
+      - path: armature/bn_root/bn_leg_IK_L
+        weight: 1
+      - path: armature/bn_root/bn_leg_IK_R
+        weight: 1
+      - path: armature/bn_root/bn_leg_pole_L
+        weight: 1
+      - path: armature/bn_root/bn_leg_pole_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_L/bn_hand2_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_L/bn_hand2_L/bn_hand3_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_R/bn_hand2_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_R/bn_hand2_R/bn_hand3_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_head
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_head/bn_headphones
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_L/bn_leg2_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_L/bn_leg2_L/bn_foot_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_R/bn_leg2_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_R/bn_leg2_R/bn_foot_R
+        weight: 1
+      - path: lumberjack
+        weight: 1
+      - path: Plane.008
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: armature|anim_lumb_run
+      takeName: armature|anim_lumb_run
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: armature
+        weight: 1
+      - path: armature/bn_root
+        weight: 1
+      - path: armature/bn_root/bn_hand_IK_L
+        weight: 1
+      - path: armature/bn_root/bn_hand_IK_R
+        weight: 1
+      - path: armature/bn_root/bn_hand_pole1_L
+        weight: 1
+      - path: armature/bn_root/bn_hand_pole1_R
+        weight: 1
+      - path: armature/bn_root/bn_leg_IK_L
+        weight: 1
+      - path: armature/bn_root/bn_leg_IK_R
+        weight: 1
+      - path: armature/bn_root/bn_leg_pole_L
+        weight: 1
+      - path: armature/bn_root/bn_leg_pole_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_L/bn_hand2_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_L/bn_hand2_L/bn_hand3_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_R/bn_hand2_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_R/bn_hand2_R/bn_hand3_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_head
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_head/bn_headphones
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_L/bn_leg2_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_L/bn_leg2_L/bn_foot_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_R/bn_leg2_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_R/bn_leg2_R/bn_foot_R
+        weight: 1
+      - path: lumberjack
+        weight: 1
+      - path: Plane.008
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: armature|lumberjackAction
+      takeName: armature|lumberjackAction
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: armature
+        weight: 1
+      - path: armature/bn_root
+        weight: 1
+      - path: armature/bn_root/bn_hand_IK_L
+        weight: 1
+      - path: armature/bn_root/bn_hand_IK_R
+        weight: 1
+      - path: armature/bn_root/bn_hand_pole1_L
+        weight: 1
+      - path: armature/bn_root/bn_hand_pole1_R
+        weight: 1
+      - path: armature/bn_root/bn_leg_IK_L
+        weight: 1
+      - path: armature/bn_root/bn_leg_IK_R
+        weight: 1
+      - path: armature/bn_root/bn_leg_pole_L
+        weight: 1
+      - path: armature/bn_root/bn_leg_pole_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_L/bn_hand2_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_L/bn_hand2_L/bn_hand3_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_R/bn_hand2_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_R/bn_hand2_R/bn_hand3_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_head
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_head/bn_headphones
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_L/bn_leg2_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_L/bn_leg2_L/bn_foot_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_R/bn_leg2_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_R/bn_leg2_R/bn_foot_R
+        weight: 1
+      - path: lumberjack
+        weight: 1
+      - path: Plane.008
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Plane.008|lumberjackAction
+      takeName: Plane.008|lumberjackAction
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: armature
+        weight: 1
+      - path: armature/bn_root
+        weight: 1
+      - path: armature/bn_root/bn_hand_IK_L
+        weight: 1
+      - path: armature/bn_root/bn_hand_IK_R
+        weight: 1
+      - path: armature/bn_root/bn_hand_pole1_L
+        weight: 1
+      - path: armature/bn_root/bn_hand_pole1_R
+        weight: 1
+      - path: armature/bn_root/bn_leg_IK_L
+        weight: 1
+      - path: armature/bn_root/bn_leg_IK_R
+        weight: 1
+      - path: armature/bn_root/bn_leg_pole_L
+        weight: 1
+      - path: armature/bn_root/bn_leg_pole_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_L/bn_hand2_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_L/bn_hand2_L/bn_hand3_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_R/bn_hand2_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_R/bn_hand2_R/bn_hand3_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_head
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_head/bn_headphones
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_L/bn_leg2_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_L/bn_leg2_L/bn_foot_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_R/bn_leg2_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_R/bn_leg2_R/bn_foot_R
+        weight: 1
+      - path: lumberjack
+        weight: 1
+      - path: Plane.008
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: lumberjack|lumberjackAction
+      takeName: lumberjack|lumberjackAction
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: armature
+        weight: 1
+      - path: armature/bn_root
+        weight: 1
+      - path: armature/bn_root/bn_hand_IK_L
+        weight: 1
+      - path: armature/bn_root/bn_hand_IK_R
+        weight: 1
+      - path: armature/bn_root/bn_hand_pole1_L
+        weight: 1
+      - path: armature/bn_root/bn_hand_pole1_R
+        weight: 1
+      - path: armature/bn_root/bn_leg_IK_L
+        weight: 1
+      - path: armature/bn_root/bn_leg_IK_R
+        weight: 1
+      - path: armature/bn_root/bn_leg_pole_L
+        weight: 1
+      - path: armature/bn_root/bn_leg_pole_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_L/bn_hand2_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_L/bn_hand2_L/bn_hand3_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_R/bn_hand2_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_hand1_R/bn_hand2_R/bn_hand3_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_head
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_head/bn_headphones
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_L/bn_leg2_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_L/bn_leg2_L/bn_foot_L
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_R/bn_leg2_R
+        weight: 1
+      - path: armature/bn_root/bn_spine1/bn_spine2/bn_leg1_R/bn_leg2_R/bn_foot_R
+        weight: 1
+      - path: lumberjack
+        weight: 1
+      - path: Plane.008
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
