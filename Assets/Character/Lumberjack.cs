@@ -16,6 +16,10 @@ public class Lumberjack : MonoBehaviour {
     public float restTime = 0;
     private float restEnd;
 
+    public int hp = 10;
+    private float lastHurtTime = 0;
+    private float hurtInterval;
+
 	// Use this for initialization
 	void Start () {
         //treeMask = 1 << treeLayer;
@@ -65,11 +69,24 @@ public class Lumberjack : MonoBehaviour {
         float step = rotationSpeed * Time.deltaTime;
         Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0F);
         Debug.DrawRay(transform.position, newDir, Color.red);
-        transform.rotation = Quaternion.LookRotation(newDir);
+
+        var lookPos = currentTarget.position - transform.position;
+        lookPos.y = 0;
+        var rotation = Quaternion.LookRotation(lookPos);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime);
+
+        //transform.rotation = Quaternion.LookRotation(newDir);
+        //transform.rotation = transform.rotation * Quaternion.AngleAxis(0, Vector3.left);
         //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(currentTarget.position - transform.position), rotationSpeed * Time.deltaTime);
 
         //move towards the tree
-        transform.position += transform.forward * moveSpeed * Time.deltaTime;
+        //transform.position += transform.forward * moveSpeed * Time.deltaTime;
+
+        CharacterController controller = GetComponent<CharacterController>();
+        transform.Rotate(0, Input.GetAxis("Horizontal"), 0);
+        Vector3 forward = transform.TransformDirection(Vector3.forward);
+        
+        controller.SimpleMove(forward * moveSpeed);
     }
 
     Transform findNearestTree()
@@ -94,4 +111,24 @@ public class Lumberjack : MonoBehaviour {
     {
         return Vector3.Distance(transform.position, tree.transform.position);
     }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Danger" && !recentlyHurt())
+        {
+            hp--;
+        }
+    }
+
+    void damage()
+    {
+        hp--;
+        lastHurtTime = Time.time;
+    }
+
+    bool recentlyHurt()
+    {
+        return Time.time - lastHurtTime > hurtInterval;
+    }
+
 }
