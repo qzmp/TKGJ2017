@@ -13,6 +13,9 @@ public class Lumberjack : MonoBehaviour {
     public float rotationSpeed;
     private Transform currentTarget;
 
+    public float restTime = 0;
+    private float restEnd;
+
 	// Use this for initialization
 	void Start () {
         //treeMask = 1 << treeLayer;
@@ -36,36 +39,44 @@ public class Lumberjack : MonoBehaviour {
             {
                 cutting = false;
                 anim.SetBool("nearTree", false);
+                restEnd = Time.time + restTime;
             }
-            goToTree();
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Moving"))
+            {
+                goToTree();
+            }
         }
 	}
 
     bool nearTree()
     {
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
-        return Physics.Raycast(transform.position, fwd, 10, treeMask);
+        return Physics.Raycast(transform.position, fwd, 0.5f, treeMask);
     }
 
     void goToTree()
     {
-
         if(currentTarget == null)
         {
             currentTarget = findNearestTree();
         }
-        //rotate to look at the player
-        transform.rotation = Quaternion.Slerp(transform.rotation,
-        Quaternion.LookRotation(currentTarget.position - transform.position), rotationSpeed * Time.deltaTime);
+        //rotate to look at the tree
+        Vector3 targetDir = currentTarget.position - transform.position;
+        float step = rotationSpeed * Time.deltaTime;
+        Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0F);
+        Debug.DrawRay(transform.position, newDir, Color.red);
+        transform.rotation = Quaternion.LookRotation(newDir);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(currentTarget.position - transform.position), rotationSpeed * Time.deltaTime);
 
-
-        //move towards the player
+        //move towards the tree
         transform.position += transform.forward * moveSpeed * Time.deltaTime;
     }
 
     Transform findNearestTree()
     {
         GameObject nearestTree = GameObject.FindGameObjectWithTag("Tree");
+        if (nearestTree == null)
+            return null;
         double minDistance = countDistanceTo(nearestTree);
 
         foreach (GameObject go in GameObject.FindGameObjectsWithTag("Tree"))
