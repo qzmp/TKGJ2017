@@ -22,7 +22,7 @@ public class SpellController : MonoBehaviour {
         if (Input.GetMouseButtonDown(0) && (Time.time - lastWaspCast) > waspCooldown)
         {
             lastWaspCast = Time.time;
-            var newNest = Instantiate(waspNestPrefab, transform.position + transform.forward, Quaternion.identity);
+            var newNest = Instantiate(waspNestPrefab, transform.position + transform.forward * 2, Quaternion.identity);
             newNest.transform.rotation = transform.rotation;
             newNest.transform.parent = gameObject.transform;
         }
