@@ -5,6 +5,7 @@ using UnityEngine;
 public class WaspNest : MonoBehaviour {
 
     public GameObject wasps;
+    public GameObject explosion;
 
 	// Use this for initialization
 	void Start () {
@@ -16,6 +17,7 @@ public class WaspNest : MonoBehaviour {
     {
         if (Input.GetMouseButtonUp(0))
         {
+            transform.parent = null;
             GetComponent<Rigidbody>().isKinematic = false;
             GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
         }
@@ -23,7 +25,12 @@ public class WaspNest : MonoBehaviour {
 
     void OnTriggerEnter()
     {
-        Instantiate(wasps, transform.position, Quaternion.identity);
+        var w = Instantiate(wasps, transform.position, Quaternion.identity);
+        
+        var e = Instantiate(explosion, transform.position, Quaternion.identity);
+        Destroy(e, 0.5f);
+        Destroy(w, 10);
         Destroy(gameObject);
+        
     }
 }
