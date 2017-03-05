@@ -43,6 +43,7 @@ public class Lumberjack : MonoBehaviour {
             {
                 if (cutting)
                 {
+                    currentTarget = null;
                     cutting = false;
                     anim.SetBool("nearTree", false);
                     restEnd = Time.time + restTime;
@@ -58,15 +59,15 @@ public class Lumberjack : MonoBehaviour {
     bool nearTree()
     {
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
-        return Physics.Raycast(transform.position, fwd, 0.5f, treeMask);
+        return Physics.Raycast(transform.position, fwd, 1f, treeMask);
     }
 
     void goToTree()
     {
-        if(currentTarget == null)
-        {
+        //if(currentTarget == null)
+        //{
             currentTarget = findNearestTree();
-        }
+        //}
         //rotate to look at the tree
         Vector3 targetDir = currentTarget.position - transform.position;
         float step = rotationSpeed * Time.deltaTime;
@@ -132,6 +133,11 @@ public class Lumberjack : MonoBehaviour {
         if(hp <= 0)
         {
             anim.SetTrigger("dying");
+            gameObject.tag = "DeadEnemy";
+            gameObject.layer = 8;
+           // gameObject.GetComponent<Rigidbody>().isKinematic = false;
+
+            //gameObject.GetComponent<Rigidbody>().useGravity = true;
         }
         else
         {

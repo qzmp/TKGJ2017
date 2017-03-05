@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpellController : MonoBehaviour {
 
     public GameObject waspNestPrefab;
+    public float waspCooldown = 5;
+    private float lastWaspCast = 0;
+    public Image waspCdImage;
 
 	// Use this for initialization
 	void Start () {
@@ -14,9 +18,10 @@ public class SpellController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetMouseButtonDown(0))
+        waspCdImage.fillAmount = Mathf.Clamp((Time.time - lastWaspCast) /waspCooldown, 0, 1);
+        if (Input.GetMouseButtonDown(0) && (Time.time - lastWaspCast) > waspCooldown)
         {
+            lastWaspCast = Time.time;
             var newNest = Instantiate(waspNestPrefab, transform.position + transform.forward, Quaternion.identity);
             newNest.transform.rotation = transform.rotation;
             newNest.transform.parent = gameObject.transform;
