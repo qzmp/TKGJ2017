@@ -7,6 +7,8 @@ public class WaspNest : MonoBehaviour {
     public GameObject wasps;
     public GameObject explosion;
 
+    public Animator anim;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -17,6 +19,7 @@ public class WaspNest : MonoBehaviour {
     {
         if (Input.GetMouseButtonUp(0))
         {
+            anim.SetTrigger("throw");
             transform.parent = null;
             GetComponent<Rigidbody>().isKinematic = false;
             GetComponent<Rigidbody>().AddForce(transform.forward * 1000);

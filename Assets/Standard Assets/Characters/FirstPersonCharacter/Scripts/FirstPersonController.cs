@@ -41,6 +41,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+        public Animator anim;
 
         // Use this for initialization
         private void Start()
@@ -94,6 +95,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void FixedUpdate()
         {
+            anim.SetBool("moving", false);
             float speed;
             GetInput(out speed);
             // always move along the camera forward as it is the direction that it being aimed at
@@ -136,6 +138,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayJumpSound()
         {
+            anim.SetTrigger("jump");
             m_AudioSource.clip = m_JumpSound;
             m_AudioSource.Play();
         }
@@ -162,6 +165,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayFootStepAudio()
         {
+            anim.SetBool("moving", true);
             if (!m_CharacterController.isGrounded)
             {
                 return;
