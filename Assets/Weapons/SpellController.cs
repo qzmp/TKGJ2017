@@ -25,7 +25,7 @@ public class SpellController : MonoBehaviour {
         {
             anim.SetTrigger("summon");
             lastWaspCast = Time.time;
-            var newNest = Instantiate(waspNestPrefab, new Vector3(gameObject.transform.parent.GetChild(0).transform.position.x, gameObject.transform.parent.GetChild(0).transform.position.y, gameObject.transform.parent.GetChild(0).transform.position.z) + gameObject.transform.parent.GetChild(0).transform.forward * 2, Quaternion.identity);
+            var newNest = Instantiate(waspNestPrefab, new Vector3(gameObject.transform.parent.GetChild(0).transform.position.x, gameObject.transform.parent.GetChild(0).transform.position.y + 1, gameObject.transform.parent.GetChild(0).transform.position.z) + gameObject.transform.parent.GetChild(0).transform.forward * 2, Quaternion.identity);
             newNest.GetComponent<WaspNest>().anim = gameObject.GetComponent<Animator>();
             newNest.transform.rotation = transform.rotation;
             newNest.transform.parent = gameObject.transform.parent.GetChild(0);

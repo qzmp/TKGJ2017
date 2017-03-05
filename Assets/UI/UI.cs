@@ -16,7 +16,7 @@ public class UI : MonoBehaviour {
 
     public void startGame()
     {
-        Application.LoadLevel("scene1");
+        Application.LoadLevel("MainScene");
     }
 
     public void exit()

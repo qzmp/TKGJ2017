@@ -23,6 +23,7 @@ public class WaspNest : MonoBehaviour {
             transform.parent = null;
             GetComponent<Rigidbody>().isKinematic = false;
             GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
+            gameObject.layer = 0;
         }
     }
 
